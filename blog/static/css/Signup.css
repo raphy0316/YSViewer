@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Noto+Sans+JP|Shadows+Into+Light|Yanone+Kaffeesatz');
+html, body, div, h1{
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body{
+  background-color: white;
+}
+
+fieldset{
+  width: 20em;
+  padding: 4em 1em 1em 1em;
+  border-radius: 0.8em;
+  height: 25em;
+  margin: 0 auto;
+}
+legend {
+    font-size: 3em;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+#wrap {
+  padding: 6em 2em 2em 2em;
+  text-align: center;
+
+}
+
+#user{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  padding-left: 1em;
+  height: 4.5em;
+  width: 35em;
+  border: none;
+  margin-top: 1.5em;
+  border-radius: 0.6em;
+  background-color: #E8E8E8;
+}
+#sign_button {
+  color: white;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  height: 3em;
+  width: 20em;
+  border : none;
+  margin-top: 1em;
+  border-radius: 0.6em;
+  background-color: #DC143C;
+}
+
+.clear{
+  clear: both;
+}

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang = "ko">
+<head>
+  <meta charset="utf-8">
+  <title>CSS</title>
+  <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Gloria+Hallelujah|Permanent+Marker" rel="stylesheet">
+  <style>
+  #rogo{
+    font-size: 30px;
+    font-family: 'Permanent Marker', cursive;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  #op{
+    margin-left: 20px;
+
+  }
+  #upload{
+    font-family: 'Gloria Hallelujah', cursive;
+    background-color: #ffffff;
+    border: none;
+    width: 50px;
+    height: 32px;
+    margin-left: 100px;
+  }
+  </style>
+</head>
+<body>
+  <div>
+  <p id = "rogo">Ys Viewer</p>
+  </div>
+  <div id = "op">
+    <form method="POST" enctype="multipart/form-data">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">업로드</button>
+    </form>
+  </div>
+</body>
+</html>

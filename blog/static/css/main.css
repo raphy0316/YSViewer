@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Noto+Sans+JP|Shadows+Into+Light|Yanone+Kaffeesatz');
+html, body, div, h1{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body{
+  background-color: white;
+  color: white;
+}
+
+body,input,section{
+  font-size: 19pt;
+  font-weight: 200;
+  line-height: 2;
+}
+
+#header {
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding: 8em 3em 3em 6em;
+  background-image: url("../image/book.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  position: relative;
+  -webkit-filter: drop-shadow(0.25em 0.25em 0.25em #222);
+  filter: drop-shadow(0.25em 0.25em 0.25em #222);
+  text-align: center;
+
+}
+#header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#wrap {
+  padding: 6em 2em 2em 2em;
+  text-align: center;
+}
+
+#header .alt {
+  height: 20em;
+  min-height: 20em;
+}
+
+
+#header .inner  {
+  position: relative;
+  z-index: 1;
+}
+
+#header.alt h1 {
+  font-size: 3em;
+  padding: 0 0.5em 0.25em 0.5em;
+  border-bottom: solid 3px white;
+  font-weight: 200;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+
+#header.alt p{
+  color: white;
+  font-weight: 400;
+  font-size: 1em;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  padding: 0em 1.5em;
+}
+
+input[type="submit"], input[type="button"]{
+  width: 8em;
+  margin-top: 1em;
+  border-radius: 0.6em;
+  border: none;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  background-color: #DC143C;
+  color: white;
+}
+#user{
+  padding-left: 1em;
+  height: 2.5em;
+  width: 20em;
+  border: none;
+  margin-top: 0.5em;
+  border-radius: 0.6em;
+  background-color: #E8E8E8;
+}
+.clear {
+  clear: both;
+}

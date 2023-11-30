@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>YS VIEWER : 소설 문서 뷰어사이트</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title></title>
+  </head>
+  <body>
+    <header id="header" class="alt">
+      <div class="inner">
+        <h1>YS ViEWER</h1>
+        <p>This page is a novel document viewer site. <br> If you like reading novels, this site can be of great help to you.</p>
+      </div>
+    </header>
+
+    <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+        <table>
+        <tr>
+            <td>{{ form.username.label_tag }}</td>
+            <td>{{ form.username }}</td>
+        </tr>
+        <tr>
+            <td>{{ form.password.label_tag }}</td>
+            <td>{{ form.password }}</td>
+        </tr>
+        </table>
+
+        <input type="submit" value="login" />
+        <input type="hidden" name="next" value="{{ next }}" />
+        <a href="{% url 'signup'%}">회원가입</a>
+    </form>
+    {% if form.errors %}
+        <p>ID 또는 비밀번호가 일치하지 않습니다. 다시 시도해주세요.</p>
+    {% endif %}
+  </body>
+</html>

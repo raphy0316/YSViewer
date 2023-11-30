@@ -1,0 +1,59 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<!doctype html>
+<html lang = "ko">
+<head>
+  <meta charset="utf-8">
+  <title>CSS</title>
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+  <style>
+
+    #jb-content {
+      width: 580px;
+      height: 600px;
+      padding: 20px;
+      margin-bottom: 20px;
+      margin-left: 120px;
+      border: 3px solid #bcbcbc;
+    }
+
+    #write{
+      font-family: 'Gloria Hallelujah', cursive;
+      background-color: #ffffff;
+      border: 1.5px solid #bcbcbc;
+      width: 50px;
+      height: 32px;
+      margin-left: 700px;
+    }
+    #inform{
+      font-size: 10px;
+      width: 120px;
+      height: 20px;
+      margin-left: 650px;
+    }
+
+  </style>
+</head>
+<body>
+  <div id = "inform">
+    <h3>{{ user.username }}님 환영합니다</h3>
+  </div>
+
+  <div id="jb-content">   <!--글 목록-->
+    {% for post in posts %}
+    <div>
+        <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+        <p>작성일: {{ post.created_date|date:'d-m-Y' }}</p>
+        <p>{{ post.text|truncatechars:200 }}</p>
+        <hr>
+    </div>
+    {% endfor %}
+  </div>
+
+  <input type="button"  value="Write" id="write" onclick="window.location='{% url 'post_new' %}';">
+
+
+</body>
+</html>
+{% endblock %}
